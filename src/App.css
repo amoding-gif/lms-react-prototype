@@ -1,0 +1,213 @@
+/* General App Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.container {
+  flex-grow: 1;
+  padding-top: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #007bff;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.05em;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+/* Search Form Styles */
+.search-form {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-form input[type="text"] {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  min-width: 280px;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.search-form button {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.search-form button:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Book List Styles */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+/* Book Item Styles */
+.book-item {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.book-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.book-item h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.25em;
+  color: #0056b3;
+}
+
+.book-item p {
+  margin: 6px 0;
+  font-size: 0.98em;
+  color: #495057;
+}
+
+.book-item strong {
+ color: #212529;
+}
+
+.book-item .status-available {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+.book-item .status-reserved {
+    color: #dc3545; /* Red */
+    font-weight: bold;
+}
+
+
+.book-item button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  font-size: 0.95em;
+  background-color: #ffc107; /* Yellow */
+  color: #212529;
+  border-color: #ffc107;
+  align-self: flex-start;
+}
+
+.book-item button:hover:not(:disabled) {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.book-item button:disabled {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
+
+/* Loading, Error, Info Message Styles */
+.loading, .error, .info-message {
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: #6c757d;
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  color: #dc3545;
+  border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}
+
+.info-message {
+  background-color: #e9ecef;
+  border-left: 4px solid #adb5bd;
+  border-radius: 4px;
+  text-align: left; /* Override center align for info messages in page containers */
+}
+
+/* Page Container Style (Profile, Admin, NotFound) */
+.page-container {
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  text-align: left;
+}
+
+.page-container h2 {
+  margin-top: 0;
+  color: #0056b3;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Placeholder section styling */
+.page-container section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ced4da;
+}
+.page-container section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.page-container section h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+}

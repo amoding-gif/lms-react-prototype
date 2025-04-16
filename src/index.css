@@ -1,0 +1,93 @@
+/* src/index.css */
+
+/* Global base styles */
+body {
+    /* Base styles */
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* --- Background Image Styles --- */
+  
+    /* Fallback background color */
+    background-color: #f8f9fa; /* Light grey background */
+  
+    /* Background image reference */
+    /* IMPORTANT: Make sure 'library-background.jpg' is the correct name of your image file */
+    /*           and it is located inside the 'src/assets/' folder. */
+    background-image: url('./assets/library-background.jpg');
+  
+    /* Background image display properties */
+    background-size: cover;         /* Scale image to cover the area */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat;   /* Prevent tiling */
+    background-attachment: fixed;   /* Keep background fixed on scroll */
+  
+    /* Base text color and line height (ensure readability over background) */
+    color: #343a40; /* Darker text color */
+    line-height: 1.6;
+  
+    /* Ensure body covers full viewport height */
+    min-height: 100vh;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* Basic container for centering content */
+  .container {
+    max-width: 1500px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 30px 20px 20px; /* Add padding */
+  
+    /* Optional: Add a subtle background to the main content area for readability */
+    /* background-color: rgba(255, 255, 255, 0.85); */ /* Semi-transparent white */
+    /* border-radius: 8px; */ /* If adding background */
+    /* margin-top: 20px; */ /* If adding background */
+    /* margin-bottom: 20px; */ /* If adding background */
+  }
+  
+  /* Basic link styling */
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Basic button styling */
+  button {
+    cursor: pointer;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    font-size: 8em;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 30.65;
+  }
+  
+  /* --- Considerations for Readability --- */
+  /* You might need to add styles to make content blocks stand out */
+  /* Example: Give book items a slightly opaque background */
+  /*
+  .book-item {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .page-container {
+     background-color: rgba(255, 255, 255, 0.9);
+  }
+  */
+  
